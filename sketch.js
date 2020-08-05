@@ -21,7 +21,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-roof = new Top(400,50,600,20);
+roof = Bodies.rectangle(400,50,600,20,{isStatic:true});
 bob1 = new Bob(300,400);
 bob2 = new Bob(350,400);
 bob3 = new Bob(400,400);
@@ -38,7 +38,7 @@ rope5 = new Rope(bob5.body,roof.body,100,0)
 function draw() {
   Engine.update(engine);
   background("white");
-  roof.display();
+  //roof.display();
   bob1.display();
   bob2.display();
   bob3.display();
