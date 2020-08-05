@@ -11,14 +11,14 @@ class Rope {
         World.add(world,this.rope);
     }
     display(){
-        var pointA = this.rope.bodyA.position;
-        var pointB = this.rope.bodyB.position;
+        var pointA = this.rope.bodyA.position.x;
+        var pointB = this.rope.bodyB.position.x;
 
         var X = pointA.x
         var Y = pointA.y
 
-        var AX = pointB.x + this.offsetX
-        var AY = pointB.y + this.offsetY
+        var AX = pointB + this.offsetX
+        var AY = pointB + this.offsetY
         strokeWeight(2);
         line(X,Y,AX,AY);
         
